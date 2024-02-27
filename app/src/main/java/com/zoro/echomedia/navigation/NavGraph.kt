@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.zoro.echomedia.screens.AddThreads
+import com.zoro.echomedia.screens.BottomNav
 import com.zoro.echomedia.screens.Home
 import com.zoro.echomedia.screens.Notification
 import com.zoro.echomedia.screens.Search
@@ -19,7 +20,7 @@ fun NavGraph(navController: NavHostController){
 
 
         composable(Routes.Splash.routes){
-            Splash()
+            Splash(navController)
         }
         composable(Routes.Home.routes){
               Home()
@@ -39,6 +40,10 @@ fun NavGraph(navController: NavHostController){
         }
         composable(Routes.profile.routes){
             profile()
+
+        }
+        composable(Routes.BottomNav.routes){
+            BottomNav(navController)
 
         }
 

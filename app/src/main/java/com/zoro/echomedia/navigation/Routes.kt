@@ -10,4 +10,6 @@ sealed class Routes(val routes: String) {
     data object Search : Routes("Search")
 
     data object BottomNav : Routes("BottomNav")
+
+
 }
